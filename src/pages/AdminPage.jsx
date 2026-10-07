@@ -13,7 +13,7 @@ export default function AdminPage() {
 
   const refreshContent = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/content");
+      const response = await fetch("https://shefoundationbackend.onrender.com/api/content");
       if (!response.ok) {
         throw new Error("Unable to load content");
       }
@@ -45,7 +45,7 @@ export default function AdminPage() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/login", {
+      const response = await fetch("https://shefoundationbackend.onrender.com/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData)
@@ -93,7 +93,7 @@ export default function AdminPage() {
     formData.append("image", imageFile);
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/upload", {
+      const response = await fetch("https://shefoundationbackend.onrender.com/api/admin/upload", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData
@@ -116,7 +116,7 @@ export default function AdminPage() {
 
   const handleArchiveToggle = async (type, itemId, archived, archiveDate) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/content/${type}/${itemId}/archive`, {
+      const response = await fetch(`https://shefoundationbackend.onrender.com/api/admin/content/${type}/${itemId}/archive`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -142,7 +142,7 @@ export default function AdminPage() {
 
   const handleDelete = async (type, itemId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/content/${type}/${itemId}`, {
+      const response = await fetch(`https://shefoundationbackend.onrender.com/api/admin/content/${type}/${itemId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });

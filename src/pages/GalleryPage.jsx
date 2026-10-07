@@ -8,7 +8,7 @@ export default function GalleryPage() {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/content");
+        const response = await fetch("https://shefoundationbackend.onrender.com/api/content");
         if (!response.ok) throw new Error("Fetch failed");
         const data = await response.json();
         const items = (data.gallery || fallbackContent.gallery).map((item) => ({
