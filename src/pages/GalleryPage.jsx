@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fallbackContent from "../data/fallbackContent";
+import resolveImageUrl from "../utils/imageUrl";
 
 export default function GalleryPage() {
   const [gallery, setGallery] = useState(fallbackContent.gallery);
@@ -43,7 +44,7 @@ export default function GalleryPage() {
         {visibleItems.length > 0 ? (
           visibleItems.map((item) => (
             <article className="photo-card" key={item.id || item.title}>
-              <img src={item.image_url} alt={item.title} />
+              <img src={resolveImageUrl(item.image_url)} alt={item.title} />
               <div className="card-copy">
                 <h3>{item.title}</h3>
                 <p>{item.note}</p>

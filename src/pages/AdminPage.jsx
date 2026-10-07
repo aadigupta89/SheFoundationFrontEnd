@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import resolveImageUrl from "../utils/imageUrl";
 
 export default function AdminPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -168,7 +169,7 @@ export default function AdminPage() {
 
     return items.map((item) => (
       <div className="manage-item" key={item.id}>
-        <img src={item.image_url} alt={item.title} />
+        <img src={resolveImageUrl(item.image_url)} alt={item.title} />
         <div className="manage-item-body">
           <h4>{item.title}</h4>
           <p>{item.note}</p>
