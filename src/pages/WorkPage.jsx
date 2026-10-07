@@ -12,7 +12,7 @@ export default function WorkPage() {
         const response = await fetch("https://shefoundationbackend.onrender.com/api/content");
         if (!response.ok) throw new Error("Fetch failed");
         const data = await response.json();
-        const items = (data.work || fallbackContent.work).map((item) => ({
+        const items = (data.work?.length ? data.work : fallbackContent.work).map((item) => ({
           ...item,
           archived: Boolean(item.archived)
         }));
