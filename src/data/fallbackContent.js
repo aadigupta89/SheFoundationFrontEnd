@@ -7,22 +7,6 @@ const fallbackContent = {
       image_url: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80",
       archived: false,
       archive_date: null
-    },
-    {
-      id: 2,
-      title: "Community Support Drive",
-      note: "Neighbours and volunteers came together to provide food kits, counselling, and immediate assistance.",
-      image_url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80",
-      archived: false,
-      archive_date: null
-    },
-    {
-      id: 3,
-      title: "Women Empowerment Workshop",
-      note: "Participants shared ideas, built networks, and learned new tools to strengthen their livelihoods.",
-      image_url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-      archived: false,
-      archive_date: null
     }
   ],
   work: [
