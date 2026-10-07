@@ -6,7 +6,7 @@ export default function resolveImageUrl(imageUrl) {
   try {
     const url = new URL(imageUrl, backendOrigin);
     if (url.hostname === "localhost" || url.hostname === "127.0.0.1") {
-      url.origin = backendOrigin;
+      return `${backendOrigin}${url.pathname}${url.search}${url.hash}`;
     }
     return url.href;
   } catch {
