@@ -1,4 +1,4 @@
-import foundationProfile from "../assets/foundation-profile.jpeg";
+import foundationProfile from "../assets/foundation-profile_updated.jpeg";
 
 export default function HomePage() {
   return (
