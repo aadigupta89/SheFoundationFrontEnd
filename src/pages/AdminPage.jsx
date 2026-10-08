@@ -4,7 +4,7 @@ import resolveImageUrl from "../utils/imageUrl";
 export default function AdminPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState("");
-  const [loginData, setLoginData] = useState({ username: "admin", password: "shepower123" });
+  const [loginData, setLoginData] = useState({ username: "admin", password: "" });
   const [loginError, setLoginError] = useState("");
   const [uploadForm, setUploadForm] = useState({ title: "", note: "", type: "gallery", archive_date: "" });
   const [imageFile, setImageFile] = useState(null);
