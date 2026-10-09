@@ -68,7 +68,7 @@ function App() {
             <div className="footerLine"></div>
             <div className="contactItem">
               <span className="contactIcon">☎</span>
-              <p>+91 8809997771</p>
+              <p>+91 989698 1999</p>
             </div>
             <div className="contactItem">
               <span className="contactIcon">✉</span>
